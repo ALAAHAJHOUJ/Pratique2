@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+
+.exemple:hover{
+    background-color: rgba(117, 113, 113, 0.76);
+}
+
+.exemple{
+    background-color: black;
+}
