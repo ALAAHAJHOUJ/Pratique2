@@ -9,9 +9,9 @@ function Context() {
 
 
   return (
-    <div ref={ref1} className='border-black border-[1px] flex  justify-center items-center gap-[10px] flex-wrap w-[300px] h-[300px]'>
+    <div ref={ref1} className='border-black border-[1px] flex flex-col-reverse justify-center items-stretch gap-[10px] flex-wrap w-[300px] h-[300px]'>
         {element1.length==30?"taille maximale":""}
-        <span className='font-bold text-[25px] text-red-600 text-center'>
+        <span className='font-bold text-[25px] border text-red-600 text-center'>
             {element1}
         </span>
         <context1.Provider value={{propr1:"HAJHOUJ",propr2:(element)=>{setElement1(element)},propr3:ref1}}>

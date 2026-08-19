@@ -33,3 +33,16 @@ width: 100vw;
   justify-content: center;
   padding:10px;
 }
+
+
+.element11{
+  display: grid;
+  width: 400px;
+  height: 400px;
+  grid-template-columns: repeat(4,50px);
+  gap: 20px;
+  grid-template-rows: 100px 100px 100px;
+  justify-content: center;
+  padding: 30px;
+  box-sizing:border-box;
+}

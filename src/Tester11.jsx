@@ -11,7 +11,7 @@ function Tester11() {
        if(ref1.current.value.length<=30)
        {          
           ref2.current=event.target.value
-          propr2(event.target.value)
+          propr2(event.target.value.toLowerCase())
        }
        else 
           ref1.current.value=ref2.current
@@ -33,7 +33,7 @@ function Tester11() {
   
 
   return (
-    <input onClick={tester66} ref={ref1} onChange={(e)=>{tester5(e)}} type='text' className='border-black border-[1px] w-[200px] h-[50px] rounded-[10px] flex justify-center items-center gap-[10px] flex-wrap'>
+    <input  ref={ref1} onChange={(e)=>{tester5(e)}} type='text' className='border-black border-[1px] w-[200px] h-[50px] rounded-[10px] flex justify-center items-center gap-[10px] flex-wrap'>
         
     </input>
   )
