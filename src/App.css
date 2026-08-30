@@ -8,3 +8,16 @@
 .exemple{
     background-color: black;
 }
+
+
+
+.element111{
+    transform: translate(-50%,-50%);
+    transform-origin: center bottom;
+}
+
+
+.element112{
+    transform: translateX(-50%);
+    transform-origin: center bottom;
+}

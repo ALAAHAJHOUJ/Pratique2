@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 function App91() {
 
@@ -11,6 +11,10 @@ function App91() {
         return [...prev,{id:prev[prev.length-1].id+1}]
     })
   }
+  const resultat=[]
+  const Aux=[]
+
+
 
   return (
     <div onClick={Ajouter} className='border-black border-[1px] flex justify-center items-center gap-[10px] flex-wrap w-[400px] h-[400px]'>
