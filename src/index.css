@@ -46,3 +46,26 @@ width: 100vw;
   padding: 30px;
   box-sizing:border-box;
 }
+
+
+
+
+#meee{
+  width: 400px;
+  height: 300px;
+  border: 1px solid black;
+  display: grid;
+  grid-template-columns: repeat(3,100px);
+  gap: 10px;
+  justify-content: center;
+  padding: 20px;
+}
+
+
+#me1{
+  perspective: 1000px;
+}
+
+#me2{
+  transform-style: preserve-3d;
+}

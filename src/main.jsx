@@ -9,9 +9,12 @@ import App91 from './App91.jsx'
 import App100 from './App100.jsx'
 import App922 from './App922.jsx'
 import App1023 from './App1023.jsx'
+import App777 from './App777.jsx'
+import App1919 from './App1919'
+import Cube from './Cube.jsx'
 
 
 
 createRoot(document.getElementById('root')).render(
-  <App1023></App1023>
+  <Cube></Cube>
 )

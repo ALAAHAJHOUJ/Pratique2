@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 
 function App1023() {
@@ -13,6 +13,16 @@ function App1023() {
         })
     }
   }
+
+  const factorielle=(nb)=>{
+    if(nb==1||nb==1) return 1
+    else return nb*factorielle(nb-1)
+  }
+
+  useEffect(()=>{
+     const resultat=factorielle(5)
+     console.log(resultat)
+  },[])
   return (
       <div onClick={Ajouter} className='border-[1px] border-black flex justify-center items-center gap-[10px] w-[400px] h-[400px] flex-wrap gap-[10px]'>
           {
