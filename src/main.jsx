@@ -17,5 +17,5 @@ import Pratiquer from './pratiquer.jsx'
 
 
 createRoot(document.getElementById('root')).render(
-   <Pratiquer></Pratiquer>
+   <Cube></Cube>
 )

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 function Pratiquer() {
 
@@ -41,35 +41,10 @@ function Pratiquer() {
     })
   }
 
-  const isValid=(text)=>{
-    const pile=[]
 
-    for(let i=0;i<text.length;i++){
-        if(text[i]=="("){
-             pile.push(1)
-        }else if(text[i]==')'){
-             if(pile.length){
-                pile.pop()
-             }else {
-                return false
-             }
-        }
-    }
-
-    return pile.length==0?true:false
-  }
-
-
-  const puissance=(nb,puiss)=>{
-    if(puiss==1){
-        return nb
-    }
-
-    return nb*puissance(nb,puiss-1) 
-  }
 
   return (
-    <div onClick={()=>{const resultat=puissance(3,4);console.log(resultat)}} className='border-black border-[1px] flex flex-wrap justify-center items-center gap-[10px] w-[300px] h-[300px]'>
+    <div onClick={Ajouter} className='border-black border-[1px] flex flex-wrap justify-center items-center gap-[10px] w-[300px] h-[300px]'>
        {
         Liste.map((ele,key)=>{
              return <div key={ele.id} className='bg-red-500 mee rounded-[10px] flex justify-center items-center w-[80px] h-[80px]'>{ele.id}</div>

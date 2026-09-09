@@ -12,13 +12,9 @@ const Aux=[]
 function Cube() {
 
   const ref1=useRef();
-  const rotation=useRef(0);
   const ref5=useRef({X:0,Y:0})
-  const intervalle=useRef()
-  const arreter=useRef(false)
  
   const tester=(element)=>{
-    return 
 
     switch(element){
       case "right":  ref5.current.Y+=20;break
@@ -37,22 +33,21 @@ function Cube() {
   }
 
 
-  const initialiser=()=>{
-     clearInterval(intervalle.current)
+  const initialiser=async()=>{
+     ref5.current.X=0
+     ref5.current.Y=0
+     ref1.current.style.transition="0s"
+     ref1.current.style.transform="rotateX(0deg) rotateY(0deg)"
+     await new Promise((res,rej)=>{
+      setTimeout(() => {
+        res("hey")
+      }, 700);
+     })
+
+     ref1.current.style.transition="700ms all"
   }
 
 
-
-  useEffect(()=>{
-     
-     let X=0
-     let Y=0
-     intervalle.current=setInterval(() => {
-       ref1.current.style.transform=`rotateX(${X}deg) rotateY(${Y}deg)`
-       X+=10
-       Y+=10
-     }, 200);
-  },[])
 
   return (
     <>
