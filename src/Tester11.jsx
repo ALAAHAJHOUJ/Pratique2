@@ -33,7 +33,7 @@ function Tester11() {
   
 
   return (
-    <input  ref={ref1} onChange={(e)=>{tester5(e)}} type='text' className='border-black border-[1px] w-[200px] h-[50px] rounded-[10px] flex justify-center items-center gap-[10px] flex-wrap'>
+    <input ref={ref1} onChange={(e)=>{tester5(e)}} type='text' className='border-black border-[1px] w-[200px] h-[50px] rounded-[10px] flex justify-center items-center gap-[10px] flex-wrap'>
         
     </input>
   )

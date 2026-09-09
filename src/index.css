@@ -69,3 +69,10 @@ width: 100vw;
 #me2{
   transform-style: preserve-3d;
 }
+
+
+.me11{
+  display: grid;
+  grid-template-columns: repeat(3,100px);
+  gap: 10px;
+}
