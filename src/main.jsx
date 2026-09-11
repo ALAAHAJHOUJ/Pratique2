@@ -14,8 +14,9 @@ import App1919 from './App1919'
 import Cube from './Cube.jsx'
 import Tester from './Tester.jsx'
 import Pratiquer from './pratiquer.jsx'
+import App35 from './App35.jsx'
 
 
 createRoot(document.getElementById('root')).render(
-   <Cube></Cube>
+   <App35></App35>
 )
