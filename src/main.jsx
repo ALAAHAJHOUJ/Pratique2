@@ -15,8 +15,10 @@ import Cube from './Cube.jsx'
 import Tester from './Tester.jsx'
 import Pratiquer from './pratiquer.jsx'
 import App35 from './App35.jsx'
+import App901 from './App901.jsx'
+import Scroll from './Scroll.jsx'
 
 
 createRoot(document.getElementById('root')).render(
-   <App35></App35>
+   <Scroll></Scroll>
 )

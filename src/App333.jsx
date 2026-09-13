@@ -13,7 +13,7 @@ function App333() {
   }
 
   return (
-    <div onClick={Ajouter} className='border-black border-[1px] p-3 flex justify-center items-center gap-[10px] flex-wrap w-[300px] min-h-[300px]'>
+    <div onClick={Ajouter} className='border-black  border-[1px] p-3 flex justify-center items-center gap-[10px] flex-wrap w-[300px] min-h-[300px]'>
        {
         Liste.map((ele,key)=>{
             return <div key={ele.id} className='bg-green-500 rounded-[10px] w-[70px] h-[70px] text-white flex justify-center items-center'>{ele.id}</div>
