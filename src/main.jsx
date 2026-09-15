@@ -17,8 +17,9 @@ import Pratiquer from './pratiquer.jsx'
 import App35 from './App35.jsx'
 import App901 from './App901.jsx'
 import Scroll from './Scroll.jsx'
+import API from './API.jsx'
 
 
 createRoot(document.getElementById('root')).render(
-   <Scroll></Scroll>
+   <API></API>
 )
