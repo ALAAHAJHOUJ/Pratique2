@@ -17,11 +17,12 @@ function Recuperer() {
   },[])
 
 
+
   return (
-    <div className='border-black border-[1px] flex justify-center flex-wrap w-[300px] h-[300px]'>
+    <div className='border-black border-[1px] flex justify-center items-center flex-wrap w-[300px] h-[300px] p-3'>
        {
         liste.map((ele,key)=>{
-           return <div className='border-black border-[1px] w-[80%] h-[80px]' key={key}>{ele.name1},{ele.name2}</div>
+           return <div className='border-black border-[1px] w-[80%] h-[80px] flex justify-center items-center gap-[10px]' key={key}>{ele.name1},{ele.name2}</div>
         })
        }
     </div>

@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import Ajouter1 from './Ajouter1';
 import Recuperer from './Recuperer';
+import Supprimer from './Supprimer';
 
 function API() {
   const ref1=useRef()
@@ -32,14 +33,18 @@ function API() {
   return (
         <>
         {
-                state1=="Ajouter"?  <Ajouter1 ref1={ref1} ref2={ref2} Envoyer={Envoyer} changer={()=>{setState1("recuperer")}}>
+                state1=="Ajouter"?  <Ajouter1 ref1={ref1} ref2={ref2} Envoyer={Envoyer} changer={()=>{setState1("recuperer")}}  supprimer1={()=>{setState1("supprimer")}}>
 
-                                     </Ajouter1>:<></>
+                                    </Ajouter1>:<></>
 
         }
 
         {
                 state1=="recuperer"?<Recuperer></Recuperer>:<></>
+        }
+
+        {
+                state1=="supprimer"?<Supprimer changer={()=>{setState1("recuperer")}}></Supprimer>:<></>
         }
         </>
 
