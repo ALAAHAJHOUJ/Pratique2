@@ -3,8 +3,9 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import Pratique888 from './pratique888.jsx'
 import Carousel from './Carousel.jsx'
+import AppAPI from './AppAPI.jsx'
 
 
 createRoot(document.getElementById('root')).render(
-   <Carousel></Carousel>
+   <AppAPI></AppAPI>
 )
