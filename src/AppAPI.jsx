@@ -6,8 +6,8 @@ function AppAPI() {
   return (
     <>
        {state1=="Ajouter"?<Ajouter changer={()=>{setState1("recuperer")}} changer1={()=>{setState1("supprimer")}}></Ajouter>:<></>}
-       {state1=="recuperer"?<Recuperer></Recuperer>:<></>}
-       {state1=="supprimer"?<Supprimer></Supprimer>:<></>}
+       {state1=="recuperer"?<Recuperer changer2={()=>{setState1("Ajouter")}} changer1={()=>{setState1("supprimer")}}></Recuperer>:<></>}
+       {state1=="supprimer"?<Supprimer changer1={()=>{setState1("Ajouter")}} changer2={()=>{setState1("recuperer")}}></Supprimer>:<></>}
     </>
   )
 }
@@ -50,7 +50,7 @@ function Ajouter({changer,changer1}){
 
 
 
-function Recuperer(){
+function Recuperer({changer1,changer2}){
         const [liste,setListe]=useState([])
 
 
@@ -75,10 +75,16 @@ function Recuperer(){
   
         return <>
 
-                
-                <div className='border-black border-[1px] p-7 flex flex-wrap justify-center items-center gap-[10px] w-[400px] min-h-[400px]'>
+                <div className=' mb-3 w-full flex justify-center gap-4'>
+                   <button onClick={changer1} className='bg-red-500 font-bold cursor-pointer hover:bg-red-200 text-white w-[120px] h-[50px] rounded-[10px] '>Supprimer</button>
+                   <button onClick={changer2} className='bg-green-400 font-bold cursor-pointer hover:bg-green-200 text-white w-[120px] h-[50px] rounded-[10px] '>Ajouter</button>
+                </div>
+                <div className='border-black border-[1px] p-7 flex flex-wrap justify-center content-start gap-[10px] w-[400px] min-h-[400px]'>
 
                     <span className='text-[40px] font-bold'>Liste</span>
+                    {
+                                liste.length==0?<div className='w-full text-center'>la liste est vide</div>:<></>
+                    }
                     {
                                 liste.map((ele,key)=>{
                                     return <div className='border w-[90%] h-[50px] flex justify-center items-center' key={ele.id}>{`id:${ele.id},name1:${ele.name1},name2:${ele.name2}`}</div>
@@ -87,6 +93,7 @@ function Recuperer(){
 
 
                 </div>  
+
         </>
 
 }
