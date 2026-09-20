@@ -7,9 +7,11 @@ import AppAPI from './AppAPI.jsx'
 import Exemple from '../Exemple.jsx'
 import Scroll from './Scroll.jsx'
 import Scroll1 from './Scroll1.jsx'
+import API2 from './API2.jsx'
+import Router1 from './Router1.jsx'
 
 
 createRoot(document.getElementById('root')).render(
 
-   <Scroll1></Scroll1>
+   <Router1></Router1>
 )
