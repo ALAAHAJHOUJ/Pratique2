@@ -24,19 +24,9 @@ function API2() {
 
 
 
-  const tester77=()=>{
-        let resultat=Math.floor(Math.random()*10+1)
-        do {
-           resultat=Math.floor(Math.random()*10+1)
-           console.log(resultat)
-        } while (resultat!=1);
-
-    
-  }
-
 
   return (
-    <div onClick={tester77} className='border-black border-[1px] flex flex-wrap justify-center items-center gap-[10px] w-[300px] min-h-[300px] p-3'>
+    <div  className='border-black border-[1px] flex flex-wrap justify-center items-center gap-[10px] w-[300px] min-h-[300px] p-3'>
       <input ref={ref1} type="text" className='border w-[70%] h-[40px] box-border p-2 rounded-[10px]'/>
       <input ref={ref2} type="text" className='border w-[70%] h-[40px] box-border p-2 rounded-[10px]'/>
       <button onClick={Envoyer} className='bg-blue-500 font-bold hover:bg-blue-300 cursor-pointer text-white w-[100px] h-[50px] rounded-[10px] flex justify-center items-center'>Ajouter</button>    
