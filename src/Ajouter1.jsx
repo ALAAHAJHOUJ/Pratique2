@@ -1,29 +1,28 @@
-import React, { useState } from 'react'
+import { useScroll, useTransform } from 'framer-motion'
+import React, { useRef, useState } from 'react'
+import { motion } from 'framer-motion'
 
-function Ajouter1() {
+
+function Ajouter1(props) {
+  const ref1=useRef()
+  const resultat=useScroll({
+    target:ref1,
+    offset:["start 90%","end 70%"]
+  })
+
+  const resultat1=useTransform(resultat.scrollYProgress,[0,1],[0.4,1])
 
 
-  const [state1,setState1]=useState({})
-  const [afficher,setAfficher]=useState(false)
-
-  const Envoyer=()=>{
-
-        fetch("http://localhost:4000/tester888/",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({name1:"hajhouj",name2:"israe"})})
-        .then((res)=>{console.log(res);return res.json()})
-        .then((res)=>{console.log(res);setState1(res);setAfficher(true)})
-        .catch((error)=>{console.log(error)}) 
-  
-    }
-  
 
   return (
-        <div className='border-black border-[1px] text-center flex flex-col justify-center items-center gap-[10px] w-[400px] h-[400px] flex-wrap'>
-         
-         {
-              afficher==true?`le propr1 est:${state1.name1} et la propr2 est:${state1.name2} et la propr3 est:${state1.propr}`:''
-         }
-
+        <div className=' w-[400px] h-[400px] relative mb-[100px]'>
+            <motion.div ref={ref1} style={{scale:resultat1,opacity:resultat1}} className='bg-green-600 text-[40px] font-bold  border text-center flex flex-col justify-center items-center gap-[10px] w-full h-full flex-wrap'>
+                {
+                  props.nom
+                }
+            </motion.div>
         </div>
+
   )
 }
 
