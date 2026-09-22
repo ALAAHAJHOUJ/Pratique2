@@ -6,6 +6,7 @@ import Recuperer11 from './recuperer11';
 import Ajouter1 from './Ajouter1';
 import Tester881 from './Tester881';
 import Comp1 from './Comp1';
+import Zindex from './zIndex';
 
 
 
@@ -22,6 +23,7 @@ function Router1() {
                 <Route path='/recuperer/' element={<Recuperer11></Recuperer11>}></Route>
                 <Route path='/tester/' element={<Tester881></Tester881>}></Route>
                 <Route path='/tester11/' element={<Comp1></Comp1>}></Route>
+                <Route path='/Zindex/' element={<Zindex></Zindex>}></Route>
                 <Route path='*' element={<h2 className='text-[40px] font-bold'>page introuvable</h2>}></Route>
       </Routes>
     </BrowserRouter>
