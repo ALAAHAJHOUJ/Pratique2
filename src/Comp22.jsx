@@ -6,27 +6,34 @@ function Comp22() {
 
   const [liste,setListe]=useState([])
 
-  const Ajouter=async()=>{
 
-     
 
-     setListe((prev)=>{
+  const Envoyer=async()=>{
 
-        
-        if(prev.length==0||prev.length==15) return [{id:1}]
+    try {
+        const resultat1=await fetch("http://localhost:4000/GetExemples/")
 
-        else return [...prev,{id:prev[prev.length-1].id+1}]
-     })
+        const contentType = resultat1.headers.get("content-type");
 
+        if (contentType?.includes("application/json")) {
+              const data = await resultat1.json();
+              setListe(data)
+        } else {
+              const text = await resultat1.text();
+              console.log(text);
+        }
+    } catch (error) {
+        console.log(error)
+    }
   }
 
 
   return (
-      <div onClick={Ajouter} className="border-[1px] border-black w-[300px] min-h-[300px] flex justify-center items-center gap-2.5 flex-wrap p-3">
+      <div onClick={Envoyer} className="border-[1px] border-black w-[300px] min-h-[300px] flex justify-center items-center gap-2.5 flex-wrap p-3">
 
         {
           liste.map((ele,key)=>{
-             return <div key={ele.id} className='bg-green-400 w-[80px] h-[80px] text-white flex justify-center items-center'>{ele.id}</div>
+             return <div key={key} className='bg-green-400 rounded-[10px] w-[80px] h-[80px] text-white flex justify-center items-center'>{ele.propr1}</div>
           })
         }
       </div>
